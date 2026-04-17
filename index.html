@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGNITEDDREAM — Exceptional People Development & Incredible Business Growth | Delhi NCR</title>
+  <meta name="description" content="IGNITEDDREAM is a leading corporate training, leadership development, and mindset transformation company in Delhi NCR. Founded by Shiv Pandey (NIT Kurukshetra | Maruti Suzuki | KPMG), we've impacted 10,000+ people. Explore programs for leaders, teams, and businesses.">
+  <meta name="keywords" content="corporate training Delhi NCR, leadership development India, mindset coaching, employee empowerment programs, business growth training, soft skills training, Shiv Pandey, IGNITEDDREAM">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{}}}</script>
+  <style>
+    /* ── Page-specific additions ─── */
+    .hero-tagline-cycle span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: cycleIn 9s ease infinite;
+    }
+    .hero-tagline-cycle span:nth-child(2) { animation-delay: 3s; }
+    .hero-tagline-cycle span:nth-child(3) { animation-delay: 6s; }
+    @keyframes cycleIn {
+      0%    { opacity:0; transform:translateY(12px); }
+      8%    { opacity:1; transform:translateY(0); }
+      28%   { opacity:1; transform:translateY(0); }
+      36%   { opacity:0; transform:translateY(-12px); }
+      100%  { opacity:0; transform:translateY(12px); }
+    }
+
+    /* Marquee logos strip */
+    .marquee-track { display:flex; gap:48px; animation: marquee 22s linear infinite; white-space:nowrap; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .marquee-wrap { overflow:hidden; -webkit-mask-image:linear-gradient(to right, transparent 0, black 10%, black 90%, transparent 100%); }
+
+    /* Impact counter */
+    .impact-num {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2.8rem,5vw,4.5rem);
+      font-weight:700;
+      color:#fff;
+      line-height:1;
+    }
+
+    /* Domain pill hover */
+    .domain-pill {
+      padding:20px 28px;
+      border:1px solid rgba(255,255,255,0.07);
+      display:flex; align-items:flex-start; gap:16px;
+      transition:all .3s ease;
+      background:rgba(255,255,255,0.02);
+    }
+    .domain-pill:hover {
+      border-color:rgba(215,38,56,0.4);
+      background:rgba(215,38,56,0.04);
+      transform:translateX(6px);
+    }
+
+    /* Who we serve card */
+    .serve-card {
+      padding:32px;
+      border-top:3px solid transparent;
+      background:var(--white);
+      transition:all .35s ease;
+      position:relative; overflow:hidden;
+    }
+    .serve-card:hover { border-top-color:var(--red); transform:translateY(-5px); box-shadow:0 24px 60px rgba(0,0,0,.1); }
+
+    /* Photo placeholder */
+    .photo-placeholder {
+      background:linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      position:relative; overflow:hidden;
+    }
+    .photo-placeholder::after {
+      content:'';
+      position:absolute; inset:0;
+      background:repeating-linear-gradient(45deg, rgba(255,255,255,.015) 0px, rgba(255,255,255,.015) 1px, transparent 1px, transparent 14px);
+    }
+    .photo-placeholder-label {
+      font-size:.65rem; letter-spacing:.2em; text-transform:uppercase;
+      color:rgba(255,255,255,.2); font-weight:600; position:relative; z-index:1;
+    }
+    .photo-placeholder-icon {
+      width:52px; height:52px; border:1.5px dashed rgba(255,255,255,.12);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      margin-bottom:12px; position:relative; z-index:1;
+    }
+
+    /* Floating stats box */
+    .stat-float {
+      position:absolute; background:var(--white); padding:20px 28px;
+      box-shadow:0 20px 60px rgba(0,0,0,.15);
+    }
+
+    /* ECO pillar */
+    .eco-pillar {
+      padding:48px 40px;
+      border-bottom:3px solid transparent;
+      transition:all .4s ease;
+      background:var(--white);
+    }
+    .eco-pillar:hover { border-bottom-color:var(--red); }
+
+    /* Pull quote mark */
+    .pull-quote-mark {
+      font-family:'Playfair Display',serif;
+      font-size:7rem; line-height:.7;
+      color:var(--red); opacity:.1;
+      display:block;
+    }
+
+    /* Proof moments grid */
+    .moments-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows:200px 200px;
+      gap:4px;
+    }
+    .moments-grid .moment-lg { grid-column:span 2; }
+
+    @media(max-width:768px) {
+      .moments-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+      .moments-grid .moment-lg { grid-column:span 2; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+  NAVIGATION
+════════════════════════════════════════ -->
+<nav id="navbar" class="nav-dark">
+  <div class="container" style="height:80px;display:flex;align-items:center;justify-content:space-between;">
+    <!-- Logo -->
+    <a href="index.html" style="flex-shrink:0;">
+      <img src="assets/images/logo-light.png" alt="IGNITED DREAM" class="logo-dark" style="height:40px;"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-dark" style="display:none;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:-.01em;">IGNITED<span style="color:var(--red);"> DREAM</span></span>
+      <img src="assets/images/logo-dark.png" alt="IGNITED DREAM" class="logo-light" style="height:40px;display:none;"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-light" style="display:none;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--charcoal);letter-spacing:-.01em;">IGNITED<span style="color:var(--red);"> DREAM</span></span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div style="display:flex;align-items:center;gap:36px;" class="hidden lg:flex">
+      <a href="index.html" class="nav-link" style="color:var(--red)!important;">Home</a>
+      <div class="dropdown">
+        <button class="nav-link" style="gap:5px;">About
+          <svg width="10" height="6" fill="none" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="about.html">About IGNITED DREAM</a>
+          <a href="shiv-pandey.html">About Shiv Pandey</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="nav-link" style="gap:5px;">Work
+          <svg width="10" height="6" fill="none" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="courses.html">Courses</a>
+          <a href="workshops.html">Workshops</a>
+        </div>
+      </div>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="side-projects.html" class="nav-link">Ventures</a>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="invite.html" class="btn btn-red hidden lg:inline-flex">Invite Me →</a>
+      <button id="hamburger" class="lg:hidden" aria-label="Open menu" style="display:flex;flex-direction:column;justify-content:center;gap:5px;padding:8px;width:40px;height:40px;">
+        <span class="ham-bar" style="display:block;width:24px;height:2px;background:white;transition:.3s;"></span>
+        <span class="ham-bar" style="display:block;width:24px;height:2px;background:white;transition:.3s;"></span>
+        <span class="ham-bar" style="display:block;width:16px;height:2px;background:white;transition:.3s;"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" role="dialog" aria-modal="true">
+  <button id="mobile-close" style="position:absolute;top:24px;right:28px;background:none;border:none;cursor:pointer;color:white;padding:8px;" aria-label="Close menu">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div style="margin-bottom:48px;"><span style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:white;">IGNITED</span><span style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--red);"> DREAM</span></div>
+  <nav>
+    <a href="index.html" class="mobile-nav-link" style="color:var(--red);">Home</a>
+    <a href="about.html" class="mobile-nav-link">About IGNITED DREAM</a>
+    <a href="shiv-pandey.html" class="mobile-nav-link">About Shiv Pandey</a>
+    <a href="courses.html" class="mobile-nav-link">Courses</a>
+    <a href="workshops.html" class="mobile-nav-link">Workshops</a>
+    <a href="resources.html" class="mobile-nav-link">Resources</a>
+    <a href="side-projects.html" class="mobile-nav-link">Ventures</a>
+    <a href="invite.html" class="mobile-nav-link" style="color:var(--red);margin-top:8px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);">Invite Me →</a>
+  </nav>
+  <div style="margin-top:auto;padding-top:48px;"><p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);">Ignite · Inspire · Impact</p></div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 1 — HERO
+  "Want Exceptional People Development & Incredible Business Growth? You've Come to the Right Place."
+════════════════════════════════════════ -->
+<section class="hero" id="hero" data-nav="dark" style="min-height:100vh;">
+  <!-- Background layers -->
+  <div style="position:absolute;inset:0;background:var(--charcoal);"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 50%, rgba(215,38,56,0.09) 0%, transparent 65%);"></div>
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,0.012) 80px,rgba(255,255,255,0.012) 81px);"></div>
+  <!-- Decorative red blob -->
+  <div class="red-blob" style="top:-80px;right:-80px;width:500px;height:500px;"></div>
+
+  <!-- Hero Photo placeholder — right column visual -->
+  <div style="position:absolute;right:0;top:0;bottom:0;width:40%;display:none;" class="lg:block">
+    <div class="photo-placeholder" style="width:100%;height:100%;opacity:.35;">
+      <div class="photo-placeholder-icon">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.4)" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+      </div>
+      <span class="photo-placeholder-label">Hero Image<br>[ Replace with actual photo ]</span>
+    </div>
+  </div>
+
+  <div class="container hero-content" style="width:100%;padding-top:80px;position:relative;z-index:2;">
+    <div style="max-width:680px;">
+
+      <!-- Cycling tagline above headline -->
+      <div class="hero-anim-1" style="margin-bottom:28px;min-height:24px;display:flex;align-items:center;gap:12px;">
+        <span style="display:inline-block;width:28px;height:2px;background:var(--red);flex-shrink:0;"></span>
+        <div class="hero-tagline-cycle" style="position:relative;height:20px;overflow:hidden;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:700;">
+          <span style="position:absolute;left:0;top:0;">IGNITE your highest dream.</span>
+          <span style="position:absolute;left:0;top:0;animation-delay:3s;">INSPIRE people to go beyond.</span>
+          <span style="position:absolute;left:0;top:0;animation-delay:6s;">Create IMPACT that changes the world.</span>
+        </div>
+      </div>
+
+      <!-- Primary headline -->
+      <h1 class="display-xl hero-anim-2" style="color:white;margin-bottom:12px;line-height:1.04;">
+        Want Exceptional<br>
+        <span style="color:var(--red);">People Development</span>
+      </h1>
+      <h1 class="display-xl hero-anim-2" style="color:white;margin-bottom:32px;line-height:1.04;">
+        &amp; Incredible Business Growth?
+      </h1>
+      <p class="hero-anim-2" style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:rgba(255,255,255,.82);margin-bottom:0;font-style:italic;">You've Come to the Right Place.</p>
+
+      <!-- Sub-headline -->
+      <p class="hero-anim-3" style="font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.55);max-width:560px;margin-top:24px;margin-bottom:44px;">We are reinventing how people grow, how leaders lead, and how businesses scale — powered by deep human insight and modern AI.</p>
+
+      <!-- CTAs -->
+      <div class="hero-anim-4" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:60px;">
+        <a href="about.html" class="btn btn-red" style="font-size:1rem;padding:18px 40px;letter-spacing:.03em;">Let's Ignite Your Growth →</a>
+        <a href="workshops.html" class="btn btn-outline-white" style="font-size:1rem;padding:18px 40px;">Explore Workshops</a>
+      </div>
+
+      <!-- Credibility stats strip -->
+      <div class="hero-anim-5" style="display:flex;flex-wrap:wrap;gap:0;padding-top:36px;border-top:1px solid rgba(255,255,255,.08);">
+        <div style="padding-right:48px;padding-bottom:8px;">
+          <span class="impact-num">10,000+</span>
+          <span class="cred-label" style="display:block;margin-top:6px;">People Impacted</span>
+        </div>
+        <div style="padding:0 48px;border-left:1px solid rgba(255,255,255,.08);padding-bottom:8px;">
+          <span class="impact-num">10+</span>
+          <span class="cred-label" style="display:block;margin-top:6px;">Years Expertise</span>
+        </div>
+        <div style="padding-left:48px;border-left:1px solid rgba(255,255,255,.08);padding-bottom:8px;">
+          <span class="impact-num">Pan India</span>
+          <span class="cred-label" style="display:block;margin-top:6px;">Cities Reached</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span>Scroll</span><div class="scroll-cue-line"></div></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  MARQUEE — Trust / Clients Logos Placeholder
+════════════════════════════════════════ -->
+<section style="background:var(--charcoal-2);padding:28px 0;border-top:1px solid rgba(255,255,255,.06);">
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <!-- Placeholder logos — replace with real client/partner logos -->
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Maruti Suzuki</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">KPMG India</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Suzuki Motor Corp.</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">MACE</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">NIT Kurukshetra</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Leadership Programs</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Corporate Workshops</span>
+      <!-- Duplicate for seamless loop -->
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Maruti Suzuki</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">KPMG India</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Suzuki Motor Corp.</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">MACE</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">NIT Kurukshetra</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Leadership Programs</span>
+      <span style="font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);">Corporate Workshops</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 2 — OUR STORY
+  "Built at the Intersection of Grit, Growth, and Purpose"
+  (Founder story MUST be prominent — per brand copy notes)
+════════════════════════════════════════ -->
+<section class="section section-warm" id="story">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="lg:grid-cols-2 grid-cols-1">
+
+      <!-- Left: Story copy -->
+      <div class="reveal reveal-left">
+        <span class="section-label">Our Story</span>
+        <span class="red-divider"></span>
+        <h2 class="display-lg" style="margin-bottom:28px;line-height:1.08;">Built at the Intersection of Grit, Growth, and Purpose.</h2>
+        <p style="font-size:1rem;line-height:1.9;color:var(--gray);margin-bottom:20px;">IGNITEDDREAM wasn't born in a boardroom.</p>
+        <p style="font-size:1rem;line-height:1.9;color:var(--gray);margin-bottom:20px;">It was born in the field — across automotive plants, quality rooms, strategy tables, and silent mountains — built by someone who has sat on both sides of the table: as an engineer who solved real-world problems, and as a seeker who asked deeper questions about human potential.</p>
+        <p style="font-size:1rem;line-height:1.9;color:var(--gray);margin-bottom:32px;">Founded by <strong style="color:var(--charcoal);">Shiv Pandey</strong>, NIT Kurukshetra alumnus and former professional with <strong style="color:var(--charcoal);">Maruti Suzuki, Suzuki Motor Corporation (Japan), MACE,</strong> and <strong style="color:var(--charcoal);">KPMG India</strong> — this is the convergence of two powerful journeys:</p>
+
+        <!-- Two path callouts -->
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+          <div style="padding:20px 24px;background:var(--white);border-left:3px solid var(--red);">
+            <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Corporate Execution</p>
+            <p style="font-size:.9rem;line-height:1.75;color:var(--gray);">Product development, quality systems, supplier ecosystems, cross-functional execution, and structured business problem-solving — lived, not taught.</p>
+          </div>
+          <div style="padding:20px 24px;background:var(--white);border-left:3px solid var(--charcoal);">
+            <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal);margin-bottom:8px;">Inner Mastery</p>
+            <p style="font-size:.9rem;line-height:1.75;color:var(--gray);">Solo travel across India, deep introspective study, and intensive Vipassana meditation — unlocking mindset, emotional balance, and the inner drivers of human behavior.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-red">Our Full Story →</a>
+          <a href="shiv-pandey.html" class="btn btn-outline-dark">Meet Shiv Pandey</a>
+        </div>
+      </div>
+
+      <!-- Right: Visual with stats float -->
+      <div class="reveal reveal-right" style="position:relative;">
+        <!-- Main photo placeholder -->
+        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/5;border-radius:0;">
+          <div class="photo-placeholder-icon" style="width:64px;height:64px;">
+            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.3)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
+          <span class="photo-placeholder-label" style="text-align:center;">Shiv Pandey Photo<br>[ Portrait — Corporate Style ]<br>Replace when ready</span>
+        </div>
+        <!-- Floating stat card -->
+        <div class="stat-float" style="bottom:-28px;left:-32px;background:var(--charcoal);">
+          <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(215,38,56,.75);margin-bottom:6px;">Impact</p>
+          <p style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:white;line-height:1;">10,000+</p>
+          <p style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:4px;">People impacted so far</p>
+        </div>
+        <!-- Floating credential card -->
+        <div class="stat-float" style="top:-24px;right:-24px;background:var(--white);max-width:200px;">
+          <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Experience</p>
+          <p style="font-size:.82rem;font-weight:600;color:var(--charcoal);line-height:1.5;">NIT Kurukshetra · Maruti Suzuki · Suzuki Japan · KPMG</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 3 — THE DIFFERENTIATOR
+  "We Don't Just Train. We Transform."
+════════════════════════════════════════ -->
+<section class="section section-dark" id="difference">
+  <div class="container">
+    <!-- Header -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px;" class="lg:grid-cols-2 grid-cols-1">
+      <div class="reveal">
+        <span class="section-label section-label-light">What Makes Us Different</span>
+        <span class="red-divider"></span>
+        <h2 class="display-lg" style="color:white;line-height:1.05;margin-bottom:0;">We Don't Just Train.<br>We <span style="color:var(--red);">Transform.</span></h2>
+      </div>
+      <div class="reveal delay-2" style="padding-bottom:4px;">
+        <p style="font-size:1.05rem;line-height:1.85;color:rgba(255,255,255,.5);margin-bottom:16px;">Most training companies deliver content. IGNITEDDREAM delivers <strong style="color:white;">clarity, capability, and change.</strong></p>
+        <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.4);">We operate at the intersection of five powerful domains — bringing the result of <strong style="color:rgba(255,255,255,.7);">10,000+ people impacted</strong> through high-energy workshops, corporate training programs, and digital content.</p>
+      </div>
+    </div>
+
+    <!-- 5 Domains -->
+    <div style="display:flex;flex-direction:column;gap:2px;" class="reveal">
+      <div class="domain-pill">
+        <div style="width:40px;height:40px;background:rgba(215,38,56,.12);border:1px solid rgba(215,38,56,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;">🎯</div>
+        <div>
+          <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px;">01 — Leadership Development</p>
+          <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.5);">Building leaders who inspire ownership, execute with clarity, and drive teams forward — at every level of the organization.</p>
+        </div>
+      </div>
+      <div class="domain-pill">
+        <div style="width:40px;height:40px;background:rgba(215,38,56,.12);border:1px solid rgba(215,38,56,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;">🧠</div>
+        <div>
+          <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px;">02 — Mindset & Self-Mastery</p>
+          <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.5);">Unlocking the inner architecture of high performance through proven behavioral and mindfulness-based frameworks.</p>
+        </div>
+      </div>
+      <div class="domain-pill">
+        <div style="width:40px;height:40px;background:rgba(215,38,56,.12);border:1px solid rgba(215,38,56,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;">⚡</div>
+        <div>
+          <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px;">03 — Employee Empowerment</p>
+          <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.5);">Equipping frontline teams and managers with the tools, confidence, and communication skills to operate at their fullest potential.</p>
+        </div>
+      </div>
+      <div class="domain-pill">
+        <div style="width:40px;height:40px;background:rgba(215,38,56,.12);border:1px solid rgba(215,38,56,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;">📈</div>
+        <div>
+          <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px;">04 — Performance Improvement</p>
+          <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.5);">Translating individual capability into measurable organizational outcomes that last beyond the training room.</p>
+        </div>
+      </div>
+      <div class="domain-pill">
+        <div style="width:40px;height:40px;background:rgba(215,38,56,.12);border:1px solid rgba(215,38,56,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;">🤖</div>
+        <div>
+          <p style="font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px;">05 — AI-Enabled Business Building</p>
+          <p style="font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.5);">Leveraging modern AI tools to supercharge research, content creation, workflow design, and scalable business growth. The future-ready differentiator.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 4 — THE 4D PROCESS
+  "How IGNITEDDREAM Drives Exceptional People Development & Incredible Business Growth"
+════════════════════════════════════════ -->
+<section class="section section-white" id="approach">
+  <div class="container">
+    <div style="text-align:center;max-width:700px;margin:0 auto 64px;" class="reveal">
+      <span class="section-label">Our Approach</span>
+      <span class="red-divider red-divider-center"></span>
+      <h2 class="display-lg" style="margin-bottom:20px;">How IGNITEDDREAM Drives Exceptional Growth.</h2>
+      <p class="lead" style="margin-bottom:12px;">Every engagement begins with a question: <em style="color:var(--charcoal);font-weight:500;">"What does success really look and feel like for you?"</em></p>
+      <p class="lead">From founders to HR leaders, from frontline teams to C-suite executives — we build programs that don't just check a training box. We build programs that <strong style="color:var(--charcoal);">shift behavior, sharpen thinking, and sustain results.</strong></p>
+    </div>
+
+    <!-- 4D Grid -->
+    <div class="method-grid">
+      <div class="method-step reveal">
+        <span class="method-num">D1</span>
+        <div class="method-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--red)" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">Diagnose</p>
+        <h3 class="display-sm" style="margin-bottom:14px;color:var(--charcoal);">Go Deep Before Wide</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--gray);">Through structured conversations and in-depth analysis, we surface the real challenges — the ones often hidden beneath the symptoms — and use them as the foundation for everything we build.</p>
+      </div>
+      <div class="method-step reveal delay-1">
+        <span class="method-num">D2</span>
+        <div class="method-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--red)" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">Develop</p>
+        <h3 class="display-sm" style="margin-bottom:14px;color:var(--charcoal);">Tailor-Made Frameworks</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--gray);">No two organizations are the same, so no two programs should be either. We craft training solutions matched precisely to your strategic objectives and culture.</p>
+      </div>
+      <div class="method-step reveal delay-2">
+        <span class="method-num">D3</span>
+        <div class="method-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--red)" stroke-width="1.8"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">Deliver</p>
+        <h3 class="display-sm" style="margin-bottom:14px;color:var(--charcoal);">Rich, Activity-Based Learning</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--gray);">Programs that come alive through immersive, activity-based learning experiences — built to engage, challenge, and inspire at every level of your organization.</p>
+      </div>
+      <div class="method-step reveal delay-3" style="border-right:none;">
+        <span class="method-num">D4</span>
+        <div class="method-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--red)" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">Drive</p>
+        <h3 class="display-sm" style="margin-bottom:14px;color:var(--charcoal);">Sustain the Results</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--gray);">The work doesn't end at delivery. We review, assess, and iterate — driving real impact forward and staying with you until lasting excellence is achieved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 5 — VISION / MISSION
+  "Transforming Human Resources & Businesses. Let's Ignite."
+════════════════════════════════════════ -->
+<section class="section section-warm" id="mission">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;" class="lg:grid-cols-2 grid-cols-1">
+
+      <!-- Left: Mission copy -->
+      <div class="reveal reveal-left">
+        <span class="section-label">Our Mission</span>
+        <span class="red-divider"></span>
+        <h2 class="display-lg" style="margin-bottom:28px;">Transforming Human Resources &amp; Businesses. <span style="color:var(--red);">Let's Ignite.</span></h2>
+        <p style="font-size:1rem;line-height:1.9;color:var(--gray);margin-bottom:20px;">We believe people are the single greatest lever of business growth — and yet, most organizations dramatically under-invest in unlocking that lever. <strong style="color:var(--charcoal);">IGNITEDDREAM exists to change that.</strong></p>
+        <p style="font-size:1rem;line-height:1.9;color:var(--gray);margin-bottom:28px;">We are <strong style="color:var(--charcoal);">your one-stop growth partner</strong> — not just for a training day, but for a sustained transformation journey.</p>
+
+        <!-- What we bring -->
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--red);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px;">✅</span>
+            <p style="font-size:.9rem;line-height:1.75;color:var(--charcoal);"><strong>Real corporate execution experience</strong> — not theory, but lived practice from Fortune 500 environments.</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--red);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px;">✅</span>
+            <p style="font-size:.9rem;line-height:1.75;color:var(--charcoal);"><strong>Deep behavioral and mindset insight</strong> — from years of personal exploration and applied learning including Vipassana.</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--red);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px;">✅</span>
+            <p style="font-size:.9rem;line-height:1.75;color:var(--charcoal);"><strong>Entrepreneurial thinking</strong> — because we build like founders, not just trainers.</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--red);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px;">✅</span>
+            <p style="font-size:.9rem;line-height:1.75;color:var(--charcoal);"><strong>Modern AI tools</strong> — because the future of learning and business building is tech-enabled.</p>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-red">Learn Our Full Story →</a>
+      </div>
+
+      <!-- Right: Proof moments photo grid -->
+      <div class="reveal reveal-right">
+        <div class="moments-grid">
+          <!-- Large placeholder -->
+          <div class="photo-placeholder moment-lg img-zoom" style="height:auto;">
+            <div class="photo-placeholder-icon">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.3)" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label" style="font-size:.58rem;text-align:center;">Training/Workshop Photo<br>Replace with actual</span>
+          </div>
+          <!-- Small placeholder -->
+          <div class="photo-placeholder img-zoom">
+            <span class="photo-placeholder-label" style="font-size:.55rem;text-align:center;">Speaking<br>Moment</span>
+          </div>
+          <!-- Small placeholder -->
+          <div class="photo-placeholder img-zoom">
+            <span class="photo-placeholder-label" style="font-size:.55rem;text-align:center;">Whiteboard<br>Session</span>
+          </div>
+          <!-- Small placeholder -->
+          <div class="photo-placeholder img-zoom">
+            <span class="photo-placeholder-label" style="font-size:.55rem;text-align:center;">Workshop<br>Group</span>
+          </div>
+        </div>
+        <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-top:12px;text-align:right;">Shiv in action — actual photos coming soon</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 6 — OUR PROGRAMS
+  "Built for Real People. Designed for Real Results."
+════════════════════════════════════════ -->
+<section class="section section-dark" id="programs">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 64px;" class="reveal">
+      <span class="section-label section-label-light">Our Effective Programs</span>
+      <span class="red-divider red-divider-center"></span>
+      <h2 class="display-lg" style="color:white;margin-bottom:0;">Built for Real People.<br>Designed for Real Results.</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="lg:grid-cols-2 grid-cols-1">
+
+      <!-- Corporate Programs -->
+      <div class="program-card reveal" style="background:rgba(255,255,255,.04);color:white;border-top:3px solid var(--red);padding:40px 36px;transition:all .35s ease;" onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background='rgba(255,255,255,.04)'">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px;">Corporate</p>
+        <h3 class="display-sm" style="color:white;margin-bottom:16px;">Corporate Programs</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:28px;">Powerful, practical training across leadership, management, communication, and organizational effectiveness. Built for companies that want people who own outcomes — not just follow instructions.</p>
+        <a href="workshops.html" style="font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:8px;">Explore → <span style="display:block;width:32px;height:1px;background:var(--red);"></span></a>
+      </div>
+
+      <!-- Motivational Programs -->
+      <div class="program-card reveal delay-1" style="background:rgba(255,255,255,.04);color:white;border-top:3px solid rgba(255,255,255,.15);padding:40px 36px;transition:all .35s ease;" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderTopColor='var(--red)'" onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderTopColor='rgba(255,255,255,.15)'">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;">Motivational</p>
+        <h3 class="display-sm" style="color:white;margin-bottom:16px;">Motivational Programs</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:28px;">High-energy, insights-packed sessions that unlock latent drive, challenge limiting beliefs, and charge people to operate at their highest possible level. Reignite the spark within.</p>
+        <a href="courses.html" style="font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:8px;">Explore → <span style="display:block;width:32px;height:1px;background:var(--red);"></span></a>
+      </div>
+
+      <!-- Leadership Programs -->
+      <div class="program-card reveal delay-1" style="background:rgba(255,255,255,.04);color:white;border-top:3px solid rgba(255,255,255,.15);padding:40px 36px;transition:all .35s ease;" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderTopColor='var(--red)'" onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderTopColor='rgba(255,255,255,.15)'">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;">Leadership</p>
+        <h3 class="display-sm" style="color:white;margin-bottom:16px;">Leadership Programs</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:28px;">For leaders at every stage — emerging managers to seasoned executives. We build the clarity, confidence, and capability to lead through complexity, inspire teams, and drive sustainable results.</p>
+        <a href="courses.html" style="font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:8px;">Explore → <span style="display:block;width:32px;height:1px;background:var(--red);"></span></a>
+      </div>
+
+      <!-- Institutional Programs -->
+      <div class="program-card reveal delay-2" style="background:rgba(255,255,255,.04);color:white;border-top:3px solid rgba(255,255,255,.15);padding:40px 36px;transition:all .35s ease;" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderTopColor='var(--red)'" onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderTopColor='rgba(255,255,255,.15)'">
+        <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;">Institutional</p>
+        <h3 class="display-sm" style="color:white;margin-bottom:16px;">Institutional Programs</h3>
+        <p style="font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:28px;">Tailored for students and youth — preparing the next generation with the mindset, communication skills, and personal effectiveness needed to succeed before they enter the real world.</p>
+        <a href="courses.html" style="font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:8px;">Explore → <span style="display:block;width:32px;height:1px;background:var(--red);"></span></a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="courses.html" class="btn btn-outline-white">View All Programs →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 7 — WHO WE SERVE
+  "Is This You?"
+════════════════════════════════════════ -->
+<section class="section section-white" id="who-we-serve">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 56px;" class="reveal">
+      <span class="section-label">Who We Serve</span>
+      <span class="red-divider red-divider-center"></span>
+      <h2 class="display-lg" style="margin-bottom:0;">Is This You?</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+      <div class="serve-card reveal">
+        <div style="font-size:2rem;margin-bottom:16px;">🚀</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--charcoal);margin-bottom:12px;">You're a founder</h3>
+        <p style="font-size:.875rem;line-height:1.8;color:var(--gray);">Who wants a sharper team culture, stronger communication, and a more resilient organization that can execute without you micromanaging every step.</p>
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);opacity:0;transition:.3s;" class="card-top-bar"></div>
+      </div>
+      <div class="serve-card reveal delay-1">
+        <div style="font-size:2rem;margin-bottom:16px;">💼</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--charcoal);margin-bottom:12px;">You're an HR leader</h3>
+        <p style="font-size:.875rem;line-height:1.8;color:var(--gray);">Who knows that the training budget is fine — but the <em>transformation</em> isn't happening yet. You want results that show up in behavior, not just feedback forms.</p>
+      </div>
+      <div class="serve-card reveal delay-2">
+        <div style="font-size:2rem;margin-bottom:16px;">🎯</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--charcoal);margin-bottom:12px;">You're a manager</h3>
+        <p style="font-size:.875rem;line-height:1.8;color:var(--gray);">Who wants to lead with more confidence, influence, and clarity — who wants people to follow because they choose to, not because they have to.</p>
+      </div>
+      <div class="serve-card reveal delay-1">
+        <div style="font-size:2rem;margin-bottom:16px;">📈</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--charcoal);margin-bottom:12px;">You're a growth-oriented professional</h3>
+        <p style="font-size:.875rem;line-height:1.8;color:var(--gray);">Looking to unlock the next level — in your career, your thinking, and your results. You're serious about growth and ready to do the real inner work.</p>
+      </div>
+      <div class="serve-card reveal delay-2">
+        <div style="font-size:2rem;margin-bottom:16px;">🎓</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--charcoal);margin-bottom:12px;">You're a student or young professional</h3>
+        <p style="font-size:.875rem;line-height:1.8;color:var(--gray);">Who wants to enter the real world ready — not just qualified, but truly <em>prepared</em> with the mindset, communication, and self-mastery that creates real impact.</p>
+      </div>
+      <!-- Closing CTA card -->
+      <div class="reveal delay-3" style="padding:32px;background:var(--charcoal);display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:white;line-height:1.55;margin-bottom:24px;">"If any of these resonate, <span style="color:var(--red);">you've come to exactly the right place.</span>"</p>
+        <a href="invite.html" class="btn btn-red btn-sm">Let's Talk →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 8 — ECO PILLARS
+  "The Three Pillars That Define Every IGNITEDDREAM Engagement"
+════════════════════════════════════════ -->
+<section class="section section-warm" id="pillars">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto 60px;" class="reveal">
+      <span class="section-label">Our Foundation</span>
+      <span class="red-divider red-divider-center"></span>
+      <h2 class="display-lg" style="margin-bottom:0;">The Three Pillars That Define Every Engagement.</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;" class="lg:grid-cols-3 grid-cols-1">
+      <div class="eco-pillar reveal">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(215,38,56,.08);border:2px solid rgba(215,38,56,.18);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--red);margin-bottom:28px;">E</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--charcoal);margin-bottom:14px;">Experience &amp; Expertise</h3>
+        <p style="font-size:.9rem;line-height:1.85;color:var(--gray);">We don't work from textbooks. We bring hard-earned, real-world experience from Fortune 500 shop floors to global boardrooms — combined with deep expertise in behavioral science, leadership, and business performance.</p>
+      </div>
+      <div class="eco-pillar reveal delay-1" style="border-left:1px solid var(--border);border-right:1px solid var(--border);">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(215,38,56,.08);border:2px solid rgba(215,38,56,.18);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--red);margin-bottom:28px;">C</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--charcoal);margin-bottom:14px;">Commitment</h3>
+        <p style="font-size:.9rem;line-height:1.85;color:var(--gray);">We are fully invested in your success. Fulfilling timelines, honoring promises, and measuring our own success by the satisfaction — and measurable performance improvement — of the people we serve.</p>
+      </div>
+      <div class="eco-pillar reveal delay-2">
+        <div style="width:72px;height:72px;border-radius:50%;background:rgba(215,38,56,.08);border:2px solid rgba(215,38,56,.18);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--red);margin-bottom:28px;">O</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--charcoal);margin-bottom:14px;">One-Stop Solution</h3>
+        <p style="font-size:.9rem;line-height:1.85;color:var(--gray);">From leadership development and motivational workshops to AI-enabled business tools and coaching programs — everything you need to grow your people and your business, under one roof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 9 — IMPACT NUMBERS + PULL QUOTE
+  "Our Impact in Numbers"
+════════════════════════════════════════ -->
+<section class="section section-dark" id="impact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:64px;" class="reveal">
+      <span class="section-label section-label-light">Our Impact in Numbers</span>
+      <span class="red-divider red-divider-center"></span>
+    </div>
+
+    <!-- Stats -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:80px;" class="lg:grid-cols-4 grid-cols-2">
+      <div class="reveal" style="text-align:center;padding:40px 20px;border-right:1px solid rgba(255,255,255,.07);">
+        <span class="impact-num">10,000+</span>
+        <span class="cred-label" style="display:block;margin-top:10px;">People Impacted</span>
+      </div>
+      <div class="reveal delay-1" style="text-align:center;padding:40px 20px;border-right:1px solid rgba(255,255,255,.07);">
+        <span class="impact-num">Growing</span>
+        <span class="cred-label" style="display:block;margin-top:10px;">Corporate Programs</span>
+      </div>
+      <div class="reveal delay-2" style="text-align:center;padding:40px 20px;border-right:1px solid rgba(255,255,255,.07);">
+        <span class="impact-num">Multiple</span>
+        <span class="cred-label" style="display:block;margin-top:10px;">Industries Served</span>
+      </div>
+      <div class="reveal delay-3" style="text-align:center;padding:40px 20px;">
+        <span class="impact-num">Pan India</span>
+        <span class="cred-label" style="display:block;margin-top:10px;">Cities Reached</span>
+      </div>
+    </div>
+
+    <!-- Pull Quote -->
+    <div style="max-width:820px;margin:0 auto;text-align:center;" class="reveal">
+      <span class="pull-quote-mark">"</span>
+      <p style="font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:600;line-height:1.6;color:rgba(255,255,255,.85);margin:-12px 0 28px;">When you IGNITE your highest dream, you expand your horizon for growth and development. When you INSPIRE people, you charge them to go beyond. When you create IMPACT, you change the world.</p>
+      <p style="font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(215,38,56,.75);">— IGNITEDDREAM Philosophy</p>
+    </div>
+
+    <!-- YouTube section -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:80px;padding-top:80px;border-top:1px solid rgba(255,255,255,.06);" class="lg:grid-cols-2 grid-cols-1 reveal">
+      <div>
+        <span class="section-label section-label-light">Shiv Pandey Network</span>
+        <h3 class="display-md" style="color:white;margin-top:12px;margin-bottom:16px;">Watch Shiv in action — before you decide.</h3>
+        <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.5);margin-bottom:28px;">Leadership frameworks, mindset insights, and the real story of building an AI-powered business — shared openly for professionals who want to grow with intention.</p>
+        <a href="https://www.youtube.com/@shivpandeynetwork" target="_blank" rel="noopener" class="btn btn-red">Subscribe on YouTube →</a>
+      </div>
+      <div class="reveal delay-2">
+        <div class="video-wrapper" style="border:1px solid rgba(255,255,255,.08);">
+          <iframe src="https://www.youtube-nocookie.com/embed/_K8kP8tz108?rel=0&modestbranding=1" title="Shiv Pandey Network — Start Here" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  SECTION 10 — FINAL CTA
+  "Ready to Ignite Exceptional Growth?"
+════════════════════════════════════════ -->
+<section class="section section-warm" id="cta">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="lg:grid-cols-2 grid-cols-1">
+
+      <!-- Left: CTA copy -->
+      <div class="reveal">
+        <span class="section-label">Let's Grow Together</span>
+        <span class="red-divider"></span>
+        <h2 class="display-lg" style="margin-bottom:24px;">Ready to Ignite Exceptional Growth?</h2>
+        <p style="font-size:1.05rem;line-height:1.85;color:var(--gray);margin-bottom:36px;">If you're a founder, HR leader, business owner, or growth-oriented professional looking for a partner who truly understands both <em>people</em> and <em>performance</em> — this is your moment.<br><br>Let's build something powerful, purposeful, and lasting. Together.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;">
+          <a href="courses.html" class="btn btn-outline-dark">Explore Our Programs</a>
+          <a href="invite.html" class="btn btn-red">Book a Discovery Call →</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <a href="mailto:connect@igniteddream.com" style="font-size:.875rem;color:var(--gray);display:flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray)'">📧 connect@igniteddream.com</a>
+          <a href="tel:+919711699963" style="font-size:.875rem;color:var(--gray);display:flex;align-items:center;gap:8px;transition:color .2s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray)'">📞 +91 9711699963</a>
+        </div>
+      </div>
+
+      <!-- Right: Invite form teaser card -->
+      <div class="reveal delay-2">
+        <div style="background:var(--charcoal);padding:48px 44px;">
+          <p style="font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(215,38,56,.7);margin-bottom:20px;">Quick Inquiry</p>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:white;margin-bottom:24px;line-height:1.4;">Tell us about your event or training need.</h4>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+            <input type="text" placeholder="Your Name" style="width:100%;padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:white;font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'" readonly onclick="window.location='invite.html'">
+            <input type="text" placeholder="Organization" style="width:100%;padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:white;font-family:'Inter',sans-serif;font-size:.9rem;outline:none;" readonly onclick="window.location='invite.html'">
+            <input type="email" placeholder="Email Address" style="width:100%;padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:white;font-family:'Inter',sans-serif;font-size:.9rem;outline:none;" readonly onclick="window.location='invite.html'">
+          </div>
+          <a href="invite.html" class="btn btn-red" style="width:100%;justify-content:center;font-size:1rem;padding:18px;">Send Inquiry →</a>
+          <p style="font-size:.72rem;color:rgba(255,255,255,.25);text-align:center;margin-top:14px;">We respond within 24–48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container" style="padding-top:80px;padding-bottom:56px;">
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:56px;" class="lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+
+      <div>
+        <p class="footer-logo-text" style="margin-bottom:6px;">IGNITED<span style="color:var(--red);"> DREAM</span></p>
+        <p class="footer-tagline" style="margin-bottom:20px;">Ignite · Inspire · Impact</p>
+        <p style="font-size:.875rem;line-height:1.8;color:rgba(255,255,255,.4);margin-bottom:28px;max-width:280px;">Building leaders, developing people, and growing organizations — powered by deep human insight and modern AI.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.youtube.com/@shivpandeynetwork" target="_blank" rel="noopener" class="btn btn-red btn-sm">▶ YouTube</a>
+          <a href="invite.html" class="btn btn-outline-white btn-sm">Invite Me</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-heading">Navigate</p>
+        <a href="about.html" class="footer-link">About IGNITED DREAM</a>
+        <a href="shiv-pandey.html" class="footer-link">About Shiv Pandey</a>
+        <a href="courses.html" class="footer-link">Courses</a>
+        <a href="workshops.html" class="footer-link">Workshops</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="side-projects.html" class="footer-link">Ventures</a>
+        <a href="invite.html" class="footer-link">Invite Me</a>
+      </div>
+
+      <div>
+        <p class="footer-heading">Programs</p>
+        <a href="courses.html" class="footer-link">Leadership Pro</a>
+        <a href="courses.html" class="footer-link">X Factor Pro</a>
+        <a href="courses.html" class="footer-link">Startup Pro</a>
+        <a href="courses.html" class="footer-link">Money Pro</a>
+        <a href="courses.html" class="footer-link">Self Mastery Pro</a>
+        <a href="workshops.html" class="footer-link">Corporate Workshops</a>
+        <a href="workshops.html" class="footer-link">Keynote Speaking</a>
+      </div>
+
+      <div>
+        <p class="footer-heading">Contact</p>
+        <a href="mailto:connect@igniteddream.com" class="footer-link" style="display:flex;align-items:flex-start;gap:8px;"><span>📧</span>connect@igniteddream.com</a>
+        <a href="tel:+919711699963" class="footer-link" style="display:flex;align-items:center;gap:8px;"><span>📞</span>+91 9711699963</a>
+        <a href="https://www.youtube.com/@shivpandeynetwork" target="_blank" rel="noopener" class="footer-link" style="display:flex;align-items:center;gap:8px;"><span>▶</span>@shivpandeynetwork</a>
+        <div style="margin-top:20px;padding:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);">
+          <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(215,38,56,.6);margin-bottom:4px;">Delhi NCR, India</p>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.4);">Available Pan India & International</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid rgba(255,255,255,.06);">
+    <div class="container" style="padding-top:24px;padding-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="font-size:.78rem;color:rgba(255,255,255,.25);">© 2025 IGNITED DREAM. All rights reserved.</p>
+      <p style="font-size:.78rem;color:rgba(255,255,255,.2);">igniteddream.com · Delhi NCR, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

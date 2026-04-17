@@ -1,0 +1,389 @@
+/* =============================================================
+   IGNITEDDREAM — Global Dark Sports Theme
+   Inspired by: Arda Guler design aesthetic
+   #0A0A0A | #141414 | #D72638 | Inter 900 UPPERCASE
+   ============================================================= */
+
+/* ── GLOBAL BASE ───────────────────────────────────────────── */
+:root {
+  --warm:        #0A0A0A;
+  --warm-2:      #141414;
+  --white:       #FFFFFF;
+  --charcoal:    #141414;
+  --charcoal-2:  #0A0A0A;
+  --charcoal-3:  #1C1C1C;
+  --border:      #222222;
+  --gray:        #888888;
+}
+
+body {
+  background-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+}
+
+/* ── SCROLLBAR ─────────────────────────────────────────────── */
+::-webkit-scrollbar-track { background: #0A0A0A; }
+
+/* ── TYPOGRAPHY — Force Inter Bold Uppercase on all headings ─ */
+.font-serif,
+h1, h2, h3, h4,
+.display-xl, .display-lg, .display-md, .display-sm {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.03em !important;
+  font-style: normal !important;
+}
+
+/* Allow italic spans to remain readable */
+em, i {
+  font-style: italic !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.lead { color: #A0A0A0 !important; }
+p { color: #A0A0A0; }
+strong { color: #FFFFFF !important; }
+
+/* ── SECTION COLORS ────────────────────────────────────────── */
+.section-warm,
+.section-white,
+.section-dark {
+  background-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+  border-top: 1px solid #1A1A1A !important;
+}
+
+/* Alternate sections for visual rhythm */
+.section-warm  { background-color: #0A0A0A !important; }
+.section-white { background-color: #111111 !important; }
+.section-dark  { background-color: #141414 !important; }
+
+/* ── NAVBAR ────────────────────────────────────────────────── */
+#navbar.nav-light {
+  background: rgba(10,10,10,0.96) !important;
+  box-shadow: 0 1px 0 #1A1A1A !important;
+  backdrop-filter: blur(14px);
+}
+#navbar.nav-scrolled {
+  background: rgba(10,10,10,0.98) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.5) !important;
+}
+#navbar.nav-light .nav-link,
+#navbar.nav-scrolled .nav-link { color: rgba(255,255,255,0.8) !important; }
+#navbar.nav-light .nav-link:hover,
+#navbar.nav-scrolled .nav-link:hover { color: #D72638 !important; }
+#navbar.nav-light .ham-bar,
+#navbar.nav-scrolled .ham-bar { background: white !important; }
+
+/* ── LOGO ──────────────────────────────────────────────────── */
+#navbar.nav-light .logo-dark,
+#navbar.nav-scrolled .logo-dark { display: block !important; filter: brightness(0) invert(1); }
+#navbar.nav-light .logo-light,
+#navbar.nav-scrolled .logo-light { display: none !important; }
+
+/* ── DROPDOWN ──────────────────────────────────────────────── */
+.dropdown-menu {
+  background: #141414 !important;
+  border-top-color: #D72638 !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6) !important;
+}
+.dropdown-menu a { color: rgba(255,255,255,0.75) !important; border-bottom-color: #222 !important; }
+.dropdown-menu a:hover { color: #D72638 !important; background: #1C1C1C !important; }
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero { background: #D72638 !important; }
+.hero-bg-img { mix-blend-mode: multiply !important; opacity: 0.5 !important; }
+.hero-overlay {
+  background: linear-gradient(to top, #0A0A0A 0%, rgba(10,10,10,0.1) 80%) !important;
+}
+
+/* ── PAGE HERO (inner pages) ───────────────────────────────── */
+.page-hero {
+  background: #0A0A0A !important;
+}
+
+/* ── BUTTONS ───────────────────────────────────────────────── */
+.btn {
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  border-radius: 12px !important;
+  letter-spacing: 0.05em !important;
+}
+.btn-red { background-color: #D72638 !important; color: #FFF !important; }
+.btn-outline-dark {
+  border-color: rgba(255,255,255,0.3) !important;
+  color: #FFFFFF !important;
+}
+.btn-outline-dark:hover {
+  background: rgba(255,255,255,0.08) !important;
+  color: #FFFFFF !important;
+}
+.btn-outline-white {
+  border-color: rgba(255,255,255,0.35) !important;
+  color: #FFFFFF !important;
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.08) !important; }
+.btn-outline-red { border-color: #D72638 !important; color: #D72638 !important; }
+.btn-outline-red:hover { background: #D72638 !important; color: #FFF !important; }
+
+/* ── TAGS ──────────────────────────────────────────────────── */
+.tag-border, .tag-dark {
+  border-color: #333 !important;
+  background-color: #1A1A1A !important;
+  color: #CCC !important;
+}
+.tag-red {
+  border-color: rgba(215,38,56,0.4) !important;
+  background-color: rgba(215,38,56,0.1) !important;
+  color: #D72638 !important;
+}
+
+/* ── CARDS — PROGRAM, WORKSHOP, ARTICLE ────────────────────── */
+.program-card,
+.workshop-card,
+.testimonial-card,
+.article-card {
+  background-color: #141414 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #222 !important;
+  border-radius: 20px !important;
+  border-top: 1px solid #222 !important;
+}
+.program-card p,
+.workshop-card p,
+.testimonial-card p,
+.article-card p { color: #A0A0A0 !important; }
+.program-card:hover,
+.workshop-card:hover { border-color: #D72638 !important; }
+.program-number { color: rgba(255,255,255,0.04) !important; }
+
+/* ── METHOD STEPS (4D) ─────────────────────────────────────── */
+.method-step {
+  background: #141414 !important;
+  border: 1px solid #222 !important;
+  border-radius: 20px !important;
+  margin: 8px !important;
+  border-right: 1px solid #222 !important;
+}
+.method-step:hover { background: #1A1A1A !important; }
+.method-num { color: rgba(255,255,255,0.04) !important; }
+
+/* ── PROJECT CARDS ─────────────────────────────────────────── */
+.project-card {
+  background-color: #141414 !important;
+  border: 1px solid #1E1E1E !important;
+  border-radius: 20px !important;
+}
+.project-card:hover { border-color: rgba(215,38,56,0.4) !important; }
+
+/* ── FAQ & QUIZ ────────────────────────────────────────────── */
+.faq-btn, .quiz-option {
+  background-color: #141414 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #222 !important;
+  border-radius: 16px !important;
+}
+.faq-btn { color: rgba(255,255,255,0.85) !important; }
+.faq-btn:hover { color: #D72638 !important; }
+.faq-item { border-bottom-color: #1E1E1E !important; }
+.faq-content p { color: #888 !important; }
+.faq-icon { border-color: #333 !important; }
+.quiz-option { padding: 16px 20px; margin-bottom: 10px; }
+.quiz-option:hover { border-color: #D72638 !important; background: rgba(215,38,56,0.05) !important; }
+.quiz-option.selected { border-color: #D72638 !important; background: rgba(215,38,56,0.1) !important; }
+
+/* ── FORMS ─────────────────────────────────────────────────── */
+.form-input {
+  background: #1C1C1C !important;
+  border-color: #2A2A2A !important;
+  color: #FFFFFF !important;
+  border-radius: 12px !important;
+}
+.form-input::placeholder { color: #555 !important; }
+.form-input:focus { border-color: #D72638 !important; box-shadow: 0 0 0 3px rgba(215,38,56,0.1) !important; }
+.form-label { color: #666 !important; }
+
+/* ── CREDIBILITY STRIP ─────────────────────────────────────── */
+.cred-strip { background: #0A0A0A !important; border-top: 1px solid #1A1A1A !important; border-bottom: 1px solid #1A1A1A !important; }
+.cred-number { color: #FFFFFF !important; }
+.cred-label { color: rgba(255,255,255,0.4) !important; }
+
+/* ── TABS ──────────────────────────────────────────────────── */
+.tab-nav { border-bottom-color: #222 !important; }
+.tab-btn { color: #555 !important; }
+.tab-btn:hover { color: #CCC !important; }
+.tab-btn.active { color: #D72638 !important; border-bottom-color: #D72638 !important; }
+
+/* ── TIMELINE ──────────────────────────────────────────────── */
+.timeline::before { background: #222 !important; }
+.timeline-dot { background: #141414 !important; border-color: #D72638 !important; }
+.timeline-v2-dot { background: #141414 !important; border-color: #D72638 !important; }
+.timeline-v2-item.active .timeline-v2-dot { background: #D72638 !important; }
+.timeline-v2-role { color: #FFFFFF !important; font-family: 'Inter', sans-serif !important; font-weight: 700 !important; }
+.timeline-v2-desc { color: #888 !important; }
+
+/* ── PULL QUOTE ────────────────────────────────────────────── */
+.pull-quote { background: #141414 !important; border-left-color: #D72638 !important; }
+.pull-quote p { color: rgba(255,255,255,0.8) !important; font-family: 'Inter', sans-serif !important; }
+
+/* ── BELIEF CARDS ──────────────────────────────────────────── */
+.belief-card {
+  background: #141414 !important;
+  border-color: #222 !important;
+  border-radius: 20px !important;
+}
+.belief-card:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.4) !important; }
+.belief-quote { color: #FFFFFF !important; font-family: 'Inter', sans-serif !important; }
+.belief-num { color: rgba(255,255,255,0.04) !important; }
+
+/* ── EXPERTISE PILLS ───────────────────────────────────────── */
+.expertise-pill {
+  background: #141414 !important;
+  border-color: #222 !important;
+  border-radius: 12px !important;
+}
+.expertise-pill:hover { border-color: #D72638 !important; }
+.expertise-pill-text { color: #CCC !important; }
+
+/* ── ADVANTAGE CARDS ───────────────────────────────────────── */
+.advantage-card {
+  background: rgba(255,255,255,0.03) !important;
+  border-color: #1E1E1E !important;
+  border-radius: 20px !important;
+}
+.advantage-card:hover { border-color: rgba(215,38,56,0.4) !important; }
+
+/* ── ABOUT PAGE — DOMAIN CARDS ─────────────────────────────── */
+.domain-card {
+  background: #141414 !important;
+  border-color: #222 !important;
+  border-radius: 20px !important;
+}
+.domain-card h3 { color: #FFFFFF !important; }
+.domain-card p { color: #888 !important; }
+.domain-card::before { background: #D72638 !important; }
+
+/* ── ABOUT PAGE — ECO CARDS ────────────────────────────────── */
+.eco-card { background: #141414 !important; border-right: 1px solid #1E1E1E !important; }
+
+/* ── ABOUT PAGE — SERVE CARDS ──────────────────────────────── */
+.serve-card {
+  background: #141414 !important;
+  border-color: #222 !important;
+  border-left-color: transparent !important;
+  border-radius: 12px !important;
+}
+.serve-card:hover { border-left-color: #D72638 !important; }
+.serve-card p { color: #888 !important; }
+.serve-card p:first-of-type { color: #FFFFFF !important; }
+
+/* ── SECTION LABEL ─────────────────────────────────────────── */
+.section-label { color: rgba(215,38,56,0.9) !important; }
+.section-intro-label { color: rgba(215,38,56,0.9) !important; }
+.section-intro-label::before { background: #D72638 !important; }
+
+/* ── RED DIVIDER ───────────────────────────────────────────── */
+.red-divider { background: #D72638 !important; }
+
+/* ── ABOUT ORIGIN TIMELINE ─────────────────────────────────── */
+.origin-timeline::before {
+  background: linear-gradient(to bottom, #D72638, rgba(215,38,56,0.08)) !important;
+}
+.origin-step::before { background: #D72638 !important; border-color: #0A0A0A !important; }
+.origin-step p:first-child { color: rgba(215,38,56,0.9) !important; }
+.origin-step p:last-child { color: #888 !important; }
+
+/* ── INLINE WHITE CARD OVERRIDES ───────────────────────────── */
+[style*="background:var(--white)"],
+[style*="background: var(--white)"],
+[style*="background:white"],
+[style*="background: white"] {
+  background-color: #141414 !important;
+}
+[style*="background:var(--warm)"],
+[style*="background: var(--warm)"] {
+  background-color: #0A0A0A !important;
+}
+[style*="border-left:3px solid var(--border)"],
+[style*="border: 1px solid var(--border)"] {
+  border-color: #222 !important;
+}
+
+/* Gray text override for inline styles */
+[style*="color:var(--gray)"],
+[style*="color: var(--gray)"] { color: #888 !important; }
+[style*="color:var(--charcoal)"],
+[style*="color: var(--charcoal)"] { color: #FFFFFF !important; }
+[style*="background:var(--charcoal)"],
+[style*="background: var(--charcoal)"] { background-color: #141414 !important; }
+[style*="color:var(--border)"],
+[style*="border-color:var(--border)"] { border-color: #222 !important; }
+
+/* ── IMPACT BAR ────────────────────────────────────────────── */
+.impact-bar {
+  background: linear-gradient(to right, #D72638, rgba(215,38,56,0.2)) !important;
+}
+
+/* ── VIDEO WRAPPER ─────────────────────────────────────────── */
+.video-wrapper { background: #141414 !important; border-radius: 16px; overflow: hidden; }
+
+/* ── HR RED ────────────────────────────────────────────────── */
+.hr-red { border-color: rgba(215,38,56,0.3) !important; }
+
+/* ── ARTICLE IMG ───────────────────────────────────────────── */
+.article-img { border-radius: 12px 12px 0 0; overflow: hidden; }
+
+/* ── BREADCRUMB ────────────────────────────────────────────── */
+.breadcrumb a { color: rgba(255,255,255,0.4) !important; }
+.breadcrumb a:hover { color: #D72638 !important; }
+.breadcrumb span { color: rgba(255,255,255,0.25) !important; }
+
+/* ── PROFILE STAT ──────────────────────────────────────────── */
+.profile-stat { border-right-color: #1A1A1A !important; }
+.profile-stat-num { color: #FFFFFF !important; }
+.profile-stat-label { color: rgba(255,255,255,0.4) !important; }
+
+/* ── MOBILE NAV ────────────────────────────────────────────── */
+.mobile-nav-link {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* ── RESOURCE TAB CONTENT ──────────────────────────────────── */
+.tab-panel p,
+.tab-panel li { color: #888 !important; }
+.tab-panel h3, .tab-panel h4 { color: #FFFFFF !important; }
+
+/* ── QUIZ PROGRESS ─────────────────────────────────────────── */
+.quiz-progress-bar { background: #1E1E1E !important; }
+
+/* ── CONTACT INPUT STYLE (Collab form) ─────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  background: #1C1C1C !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  border-radius: 12px !important;
+}
+input::placeholder, textarea::placeholder { color: #444 !important; }
+
+/* ── FOOTER ────────────────────────────────────────────────── */
+.footer { background: #0A0A0A !important; border-top: 1px solid #1A1A1A !important; }
+.footer-logo-text {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ── RESPONSIVE HELPERS ────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .domain-card { border-radius: 16px !important; }
+  .belief-card { border-radius: 16px !important; }
+}
